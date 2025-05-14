@@ -21,7 +21,7 @@ export class UpdateUserDtoRequest {
   })
   @IsOptional()
   @IsString()
-  password?: string;
+  password: string;
 
   @ApiProperty({
     type: 'number',

@@ -36,7 +36,7 @@ export class GetAllUsersDtoRequest {
   })
   @IsInt()
   @IsPositive()
-  page: number;
+  page:number;
 
   @ApiProperty({
     type: 'number',
@@ -59,7 +59,7 @@ export class GetAllUsersDtoRequest {
   })
   @IsString()
   @IsOptional()
-  sortOrder: sortOrder;
+  sortOrder?: sortOrder;
 
   @ApiProperty({
     type: 'string',
@@ -70,7 +70,7 @@ export class GetAllUsersDtoRequest {
   })
   @IsString()
   @IsOptional()
-  sortField: sortField;
+  sortField?: sortField;
 
   @ApiProperty({
     type: 'number',

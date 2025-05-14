@@ -49,5 +49,5 @@ export class CreateUserDtoRequest {
     required: true,
   })
   @IsOptional()
-  image: Express.Multer.File;
+  image?: Express.Multer.File;
 }

@@ -106,7 +106,7 @@ export class UserService implements OnModuleInit {
       email: payload.email,
       age: payload.age,
       password: hashedPassword,
-      image: image.fileUrl,
+      // image: image.fileUrl,
     });
 
     return {
@@ -131,7 +131,7 @@ export class UserService implements OnModuleInit {
     await this.userModel.destroy({ where: { id: id } });
 
     return {
-      message: 'succes',
+      message: 'success',
     };
   }
 

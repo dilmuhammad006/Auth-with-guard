@@ -30,7 +30,7 @@ import { checkFileMimeType, checkFileSize } from 'src/pipes';
 import { Protected, Roles } from 'src/decorators';
 import { UserRoles } from './enums';
 
-@Controller('users')
+@Controller({ path: 'users', version: ['2'] })
 export class UserController {
   constructor(private readonly service: UserService) {}
 
