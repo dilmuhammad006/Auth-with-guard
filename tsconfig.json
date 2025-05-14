@@ -14,7 +14,8 @@
       "@modules": ["./src/modules"],
       "@guards": ["./src/guards"],
       "@helpers": ["./src/helpers"],
-      "@users": ["./src/modules/users"]
+      "@users": ["./src/modules/users"],
+      "@pipes": ["./src/pipes"]
     },
     "incremental": true,
     "skipLibCheck": true,

@@ -75,7 +75,8 @@
     ],
     "rootDir": "src",
     "moduleNameMapper": {
-      "^@helpers$": "<rootDir>/helpers"
+      "^@helpers$": "<rootDir>/helpers",
+      "^@pipes$": "<rootDir>/pipes"
     },
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {

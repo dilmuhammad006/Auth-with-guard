@@ -42,12 +42,13 @@ describe('UserController', () => {
     expect(service.getUserById).toHaveBeenCalledWith(1);
   });
 
-  it(' create a user', async () => {
+  it('should create a user', async () => {
     const dto: CreateUserDtoRequest = {
       name: 'Tomas',
       email: 'tomas@gmail.com',
       age: 25,
       password: '123456',
+      image: [] as any,
     };
 
     const file = {

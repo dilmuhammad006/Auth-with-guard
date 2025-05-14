@@ -26,9 +26,9 @@ import {
   ApiOperation,
 } from '@nestjs/swagger';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { checkFileMimeType, checkFileSize } from 'src/pipes';
-import { Protected, Roles } from 'src/decorators';
+import { Protected, Roles } from '../../decorators/index';
 import { UserRoles } from './enums';
+import { checkFileMimeType, checkFileSize } from '@pipes';
 
 @Controller({ path: 'users', version: ['2'] })
 export class UserController {
