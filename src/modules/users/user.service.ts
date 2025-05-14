@@ -98,7 +98,7 @@ export class UserService implements OnModuleInit {
       throw new ConflictException('User with this email is already exists');
     }
 
-    const image = await this.fs.uploadFile(file);
+    // const image = await this.fs.uploadFile(file);
 
     const hashedPassword = await bcrypt.hash(payload.password, 10);
     const user = await this.userModel.create({
@@ -106,7 +106,7 @@ export class UserService implements OnModuleInit {
       email: payload.email,
       age: payload.age,
       password: hashedPassword,
-      // image: image.fileUrl,
+      // image: file.originalname,
     });
 
     return {

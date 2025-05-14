@@ -1,0 +1,27 @@
+{
+    "moduleFileExtensions": ["js", "json", "ts"],
+    "rootDir": "../",
+    "moduleNameMapper": {
+      "^@modules/(.*)$": "<rootDir>/src/modules/$1",
+      "^@modules$": "<rootDir>/src/modules",
+      "^@guards/(.*)$": "<rootDir>/src/guards/$1",
+      "^@guards$": "<rootDir>/src/guards",
+      "^@helpers/(.*)$": "<rootDir>/src/helpers/$1",
+      "^@helpers$": "<rootDir>/src/helpers",
+      "^@users/(.*)$": "<rootDir>/src/modules/users/$1",
+      "^@users$": "<rootDir>/src/modules/users",
+      "^@pipes/(.*)$": "<rootDir>/src/pipes/$1",
+      "^@pipes$": "<rootDir>/src/pipes"
+    },
+    "testRegex": ".*\\.e2e-spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": ["**/*.(t|j)s"],
+    "collectCoverage": false,
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "maxWorkers": 2,
+    "testTimeout": 10000
+  }
+  

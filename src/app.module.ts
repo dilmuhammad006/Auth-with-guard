@@ -10,6 +10,8 @@ import * as path from 'path';
 @Module({
   imports: [
     ConfigModule.forRoot({
+      envFilePath:
+        process.env.NODE_ENV?.trim() === 'test' ? '.env.test' : '.env',
       isGlobal: true,
     }),
     ServeStaticModule.forRoot({
@@ -24,7 +26,7 @@ import * as path from 'path';
       username: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
-      logging: console.log,
+      logging: false,
       sync: {
         alter: true,
       },

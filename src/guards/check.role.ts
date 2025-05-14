@@ -7,8 +7,8 @@ import {
 import { Reflector } from '@nestjs/core';
 import { Request } from 'express';
 import { Observable } from 'rxjs';
-import { ROLES_KEY } from 'src/decorators';
-import { UserRoles } from 'src/modules';
+import { ROLES_KEY } from '../decorators/check.role';
+import { UserRoles } from '../modules/users/enums/user.role';
 
 @Injectable()
 export class CheckRole implements CanActivate {

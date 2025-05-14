@@ -11,8 +11,8 @@ import { Reflector } from '@nestjs/core';
 import { JsonWebTokenError, JwtService, TokenExpiredError } from '@nestjs/jwt';
 import { Request } from 'express';
 import { Observable } from 'rxjs';
-import { PROTECTED_KEY } from 'src/decorators';
-import { UserRoles } from 'src/modules';
+import { PROTECTED_KEY } from '../decorators/protected';
+import { UserRoles } from '../modules/users/enums/user.role';
 
 @Injectable()
 export class CheckAuth implements CanActivate {

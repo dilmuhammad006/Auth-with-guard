@@ -14,7 +14,8 @@ export class fsHelper {
 
   async uploadFile(file: Express.Multer.File) {
     const fileFolder = path.join(process.cwd(), 'uploads');
-    const fileName = `${Date.now()}-file.${file.originalname.split('.')[1]}`;
+    const fileName =
+      `${Date.now()}-file.${file.originalname?.split('.')[1]}` || 'test';
     if (!fs.existsSync(fileFolder)) {
       fs.mkdirSync(fileFolder);
     }
@@ -25,7 +26,6 @@ export class fsHelper {
       fileUrl: fileName,
     };
   }
-
 
   async unlinkFile(name: string) {
     const fileFolder = path.join(process.cwd(), 'uploads', name);

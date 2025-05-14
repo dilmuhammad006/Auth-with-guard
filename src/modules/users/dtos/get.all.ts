@@ -36,7 +36,7 @@ export class GetAllUsersDtoRequest {
   })
   @IsInt()
   @IsPositive()
-  page:number;
+  page: number;
 
   @ApiProperty({
     type: 'number',
