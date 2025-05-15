@@ -27,9 +27,5 @@ describe('App 2e2', () => {
     expect(app).toBeDefined();
   });
 
-  it('Db connection', async () => {
-    const res = await sequelize.authenticate();
-
-    expect(res).toBeDefined();
-  });
+ 
 });

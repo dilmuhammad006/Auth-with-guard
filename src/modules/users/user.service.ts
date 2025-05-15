@@ -166,28 +166,21 @@ export class UserService implements OnModuleInit {
     const founded = await this.userModel.findByPk(id);
     if (!founded) {
       throw new NotFoundException(
-        'User not foud with given ID or already deleted!',
+        'User not found with given ID or already deleted!',
       );
     }
 
+    let updateData: any = {
+      name: payload.name || founded.name,
+      age: payload.age || founded.age,
+    };
+
     if (payload.password) {
       const hashedPassword = await bcrypt.hash(payload.password, 10);
-      await this.userModel.update(
-        {
-          name: payload.name || founded.dataValues.name,
-          password: hashedPassword,
-          age: payload.age || founded.dataValues.name,
-        },
-        { where: { id: id } },
-      );
+      updateData.password = hashedPassword;
     }
-    await this.userModel.update(
-      {
-        name: payload.name || founded.dataValues.name,
-        age: payload.age || founded.dataValues.age,
-      },
-      { where: { id: id } },
-    );
+
+    await this.userModel.update(updateData, { where: { id } });
 
     const user = await this.userModel.findByPk(id);
     return {

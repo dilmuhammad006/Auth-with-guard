@@ -11,7 +11,7 @@ export class UpdateUserDtoRequest {
   })
   @IsOptional()
   @IsString()
-  name?: string;
+  name: string;
 
   @ApiProperty({
     type: 'string',
@@ -34,5 +34,5 @@ export class UpdateUserDtoRequest {
     return parseInt(value);
   })
   @IsInt()
-  age?: number;
+  age: number;
 }
